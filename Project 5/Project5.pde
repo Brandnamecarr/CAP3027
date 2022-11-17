@@ -25,6 +25,18 @@ void setup()
   cam.position = new PVector(0, -50, 100);
 
   // TODO: Load scene files here (testfile, scene 1, and scene 2)
+  BufferedReader testFile, scene1, scene2;
+  testFile = createReader("scenes/testfile.txt");
+  scene1 = createReader("scenes/scene1.txt");
+  scene2 = createReader("scenes/scene2.txt");
+  
+  //scenes.add(new Scene(testFile));
+  scenes.add(new Scene(scene1));
+  scenes.add(new Scene(scene2));
+  
+  scenes.get(0).Update();
+  scenes.get(1).Update();
+  //scenes.get(2).Update();
   
   lights(); // Lights turned on once here
 }
@@ -38,6 +50,7 @@ void draw()
   rotateZ(radians(180)); // Flip everything upside down because Processing uses -y as up
   
   // TODO: Draw the current scene
+  scenes.get(currentScene).DrawScene();
 
   popMatrix();
 
