@@ -30,9 +30,9 @@ void setup()
   scene1 = createReader("scenes/scene1.txt");
   scene2 = createReader("scenes/scene2.txt");
   
-  //scenes.add(new Scene(testFile));
   scenes.add(new Scene(scene1));
   scenes.add(new Scene(scene2));
+  scenes.add(new Scene(testFile));
   
   scenes.get(0).Update();
   scenes.get(1).Update();
