@@ -60,7 +60,11 @@ class Scene
     catch(IOException e) 
     {
       e.printStackTrace();
-    }   
+    }  
+    catch(NumberFormatException nf)
+    {
+      nf.printStackTrace();
+    }
   }
 
   void DrawScene()
@@ -75,7 +79,7 @@ class Scene
     
     for(int j = 0; j < shapeNum; j++)
     {
-      PShape model=loadShape("models/"+shapeNames[j]+".obj"); 
+      PShape model = loadShape("models/" + shapeNames[j] + ".obj"); 
       
       pushMatrix();
       model.setFill(true);  
@@ -87,13 +91,12 @@ class Scene
     }
   }
 
-
-  int GetShapeCount() 
+ public int GetShapeCount() 
   {
     return shapeNum;
   }
 
-  int GetLightCount() 
+ public int GetLightCount() 
   {
     return lightNum;
   }

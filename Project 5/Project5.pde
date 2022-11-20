@@ -36,7 +36,7 @@ void setup()
   
   scenes.get(0).Update();
   scenes.get(1).Update();
-  //scenes.get(2).Update();
+  scenes.get(2).Update();
   
   lights(); // Lights turned on once here
 }
