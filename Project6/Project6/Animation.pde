@@ -8,6 +8,8 @@ class KeyFrame
   // be reused for either. An array of one is perfectly viable.
   public ArrayList<PVector> points = new ArrayList<PVector>();
   
+  public KeyFrame() {}
+  
   public KeyFrame(float time, PVector vect)
   {
     this.time = time;
@@ -32,6 +34,8 @@ class Animation
   }
   
   ArrayList<KeyFrame> keyFrames = new ArrayList<KeyFrame>();
+  
+  public Animation() {}
   
   public Animation(ArrayList<KeyFrame> keyFrames)
   {
